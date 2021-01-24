@@ -22,7 +22,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-https://github.com/daniieelgs/simulador_inversores
+https://github.com/daniieelgs/bolsa_valores
 
 daniieelgs@gmail.com
 
@@ -805,7 +805,7 @@ class frame extends JFrame{
 	        }
 	        catch ( Exception e ) {
 				Toolkit.getDefaultToolkit().beep();
-	            JOptionPane.showMessageDialog(this, "Imposible modificar el tema visual", "Lookandfeel inválido.",
+	            JOptionPane.showMessageDialog(this, "Imposible modificar el tema visual", "Lookandfeel invÃ¡lido.",
 	              JOptionPane.ERROR_MESSAGE);
 				e.printStackTrace();
 	        }
@@ -817,7 +817,7 @@ class frame extends JFrame{
 	        }
 	        catch ( Exception e ) {
 				Toolkit.getDefaultToolkit().beep();
-	            JOptionPane.showMessageDialog(this, "Imposible modificar el tema visual", "Lookandfeel inválido.",
+	            JOptionPane.showMessageDialog(this, "Imposible modificar el tema visual", "Lookandfeel invÃ¡lido.",
 	              JOptionPane.ERROR_MESSAGE);
 				e.printStackTrace();
 	        }
@@ -828,7 +828,7 @@ class frame extends JFrame{
 	        }
 	        catch ( Exception e ) {
 				Toolkit.getDefaultToolkit().beep();
-	            JOptionPane.showMessageDialog(this, "Imposible modificar el tema visual", "Lookandfeel inválido.",
+	            JOptionPane.showMessageDialog(this, "Imposible modificar el tema visual", "Lookandfeel invÃ¡lido.",
 	              JOptionPane.ERROR_MESSAGE);
 				e.printStackTrace();
 	        }
@@ -938,10 +938,10 @@ class panel_principal extends JPanel{
 		
 		add(scroll_empresa);
 		
-		JLabel Lejecuciones=new JLabel("Nº de ejecuciones: ");
+		JLabel Lejecuciones=new JLabel("NÂº de ejecuciones: ");
 		Sejecuciones=new JSpinner();
 		
-		Lejecuciones.setToolTipText("Número de ejecuciones");
+		Lejecuciones.setToolTipText("NÃºmero de ejecuciones");
 		
 		Lejecuciones.setFont(new Font("Arial", Font.BOLD, 15));
 		
@@ -1006,7 +1006,7 @@ class panel_principal extends JPanel{
 		conf.setFocusPainted(false);
 		conf.setBorderPainted(false); 
 		conf.setContentAreaFilled(false); 
-		conf.setToolTipText("Configuración");
+		conf.setToolTipText("ConfiguraciÃ³n");
 		
 		conf.setIcon(new ImageIcon(main_TDR_Leo.class.getResource("/TDR/Images/conf.png")));
 		
@@ -1126,8 +1126,8 @@ class panel_principal extends JPanel{
 						
 						char c=nombre_in.charAt(j);
 						
-						String letras_min="qwertyuiopasdfghjklñzxcvbnm";
-						String letras_may="QWERTYUIOPASDFGHJKLÑZXCVBNM";
+						String letras_min="qwertyuiopasdfghjklÃ±zxcvbnm";
+						String letras_may="QWERTYUIOPASDFGHJKLÃ‘ZXCVBNM";
 						String nums="1234567890";
 						
 						for(int h=0; h<letras_min.length(); h++) {
@@ -1201,8 +1201,8 @@ class panel_principal extends JPanel{
 						
 						char c=nombre_em.charAt(j);
 						
-						String letras_min="qwertyuiopasdfghjklñzxcvbnm";
-						String letras_may="QWERTYUIOPASDFGHJKLÑZXCVBNM";
+						String letras_min="qwertyuiopasdfghjklÃ±zxcvbnm";
+						String letras_may="QWERTYUIOPASDFGHJKLÃ‘ZXCVBNM";
 						String nums="1234567890";
 						
 						for(int h=0; h<letras_min.length(); h++) {
@@ -1454,8 +1454,8 @@ class panel_principal extends JPanel{
 			
 			JPanel ejecuciones=new JPanel();
 						
-			JLabel lejecuciones=new JLabel("Nº de ejecuciones:");
-			lejecuciones.setToolTipText("Número de ejecuciones");
+			JLabel lejecuciones=new JLabel("NÂº de ejecuciones:");
+			lejecuciones.setToolTipText("NÃºmero de ejecuciones");
 			JSpinner sejecuciones=new JSpinner();
 			sejecuciones.setModel(new SpinnerNumberModel(config.getExecutations(), 1, 10000, 1));
 			
@@ -1485,7 +1485,7 @@ class panel_principal extends JPanel{
 			JButton aplicar=new JButton("Aplicar");
 			
 			cancelar.setToolTipText("Salir sin guardar");
-			restore.setToolTipText("Restablecer la configuración por defecto");
+			restore.setToolTipText("Restablecer la configuraciÃ³n por defecto");
 			aplicar.setToolTipText("Guardar cambios");
 			
 			botones.add(cancelar);
@@ -1505,7 +1505,7 @@ class panel_principal extends JPanel{
 				
 				public void actionPerformed(ActionEvent e) {
 										
-					int aceptar=JOptionPane.showConfirmDialog(null, "Se restablecerá toda la configuración por defecto\n¿Quiere continuar?", "Warning", JOptionPane.YES_NO_OPTION);;
+					int aceptar=JOptionPane.showConfirmDialog(null, "Se restablecerÃ¡ toda la configuraciÃ³n por defecto\nÂ¿Quiere continuar?", "Warning", JOptionPane.YES_NO_OPTION);;
 										
 					if(aceptar==0) {
 					
@@ -1521,7 +1521,7 @@ class panel_principal extends JPanel{
 				
 				public void actionPerformed(ActionEvent e) {
 					
-					mensaje m=new mensaje("El sistema se reiniciará para aplicar los cambios", "¿Quiere continuar?", "Warning", 3);
+					mensaje m=new mensaje("El sistema se reiniciarÃ¡ para aplicar los cambios", "Â¿Quiere continuar?", "Warning", 3);
 					
 					int aceptar=m.show();
 										
@@ -1896,19 +1896,19 @@ class panel_principal extends JPanel{
 				
 				setLayout(new GridLayout(10, 2));
 				
-				lacciones=new JLabel("Nº acciones:");
+				lacciones=new JLabel("NÂº acciones:");
 				lvalor=new JLabel("Valor:");
 				lmax=new JLabel("Max.:");
 				lmin=new JLabel("Min.:");
-				lvar=new JLabel("± (%):");
+				lvar=new JLabel("Â± (%):");
 				laleatorio=new JLabel("Aleatorio:");
 				
-				lacciones.setToolTipText("Número de acciones disponibles");
-				lvalor.setToolTipText("Valor inicial de cada acción");
-				lmax.setToolTipText("Valor máximo que podrá llegar a tener las acciones");
-				lmin.setToolTipText("Valor mínimo que podrán llegar a tener las acciones");
-				lvar.setToolTipText("Porcentaje de aumento/decremento que sufrirán las acciones después de ser compradas/vendidas");
-				laleatorio.setToolTipText("Previsión aleatoria o manual del aumento/decremento de las acciones al final de cada trimestre");
+				lacciones.setToolTipText("NÃºmero de acciones disponibles");
+				lvalor.setToolTipText("Valor inicial de cada acciÃ³n");
+				lmax.setToolTipText("Valor mÃ¡ximo que podrÃ¡ llegar a tener las acciones");
+				lmin.setToolTipText("Valor mÃ­nimo que podrÃ¡n llegar a tener las acciones");
+				lvar.setToolTipText("Porcentaje de aumento/decremento que sufrirÃ¡n las acciones despuÃ©s de ser compradas/vendidas");
+				laleatorio.setToolTipText("PrevisiÃ³n aleatoria o manual del aumento/decremento de las acciones al final de cada trimestre");
 				
 				sacciones=new JSpinner();
 				sacciones.setModel(new SpinnerNumberModel(defecto.getN_acciones(), 1, 1000, 10));
@@ -2024,10 +2024,10 @@ class panel_principal extends JPanel{
 				
 				for(int i=0; i<4; i++) {
 					
-					ltr[i]=new JLabel((i+1) + "º (%)");
+					ltr[i]=new JLabel((i+1) + "Âº (%)");
 					ltr[i].setVisible(!caleatorio.isSelected());
 					
-					ltr[i].setToolTipText("Previsión del aumento/decremento de las acciones en el " + (i+1) + " trimestre");
+					ltr[i].setToolTipText("PrevisiÃ³n del aumento/decremento de las acciones en el " + (i+1) + " trimestre");
 					
 					str[i]=new JSpinner();
 					str[i].setModel(new SpinnerNumberModel(defecto.getValor_trimestres()[i], -1000, 1000, 10));
@@ -2074,9 +2074,9 @@ class panel_principal extends JPanel{
 			
 			for(int i=0; i<ejecuciones; i++) {
 				
-				JLabel ejecucion=new JLabel((i+1) + "º ejecución");
+				JLabel ejecucion=new JLabel((i+1) + "Âº ejecuciÃ³n");
 				
-				ejecucion.setToolTipText("Informe de la " + (i+1) + "º ejecución");
+				ejecucion.setToolTipText("Informe de la " + (i+1) + "Âº ejecuciÃ³n");
 				
 				informes.add(ejecucion);
 				
@@ -2212,7 +2212,7 @@ class panel_principal extends JPanel{
 					
 				}
 				
-				ejecucion.setBorder(new TitledBorder("Ejecución (" + (i+1) + ")"));
+				ejecucion.setBorder(new TitledBorder("EjecuciÃ³n (" + (i+1) + ")"));
 				
 				resumen_vertical.add(ejecucion);
 				
@@ -2279,7 +2279,7 @@ class panel_principal extends JPanel{
 			
 			for(int i=1; i<titColumnas.length; i++) {
 				
-				titColumnas[i]=i + "º";
+				titColumnas[i]=i + "Âº";
 				
 			}
 			
@@ -2372,7 +2372,7 @@ class inversor_panel extends JPanel{
 		JLabel Ldinero=new JLabel("Dinero");
 		JLabel Lacierto=new JLabel("Acierto");
 		
-		Lnombre.setToolTipText("Nombre único para el inversor");
+		Lnombre.setToolTipText("Nombre Ãºnico para el inversor");
 		Ldinero.setToolTipText("Dinero inicial");
 		Lacierto.setToolTipText("Probabilidad de acierto");
 		
@@ -2409,9 +2409,9 @@ class inversor_panel extends JPanel{
 		num_inversores=0;
 		
 		
-		Lnum_inversores=new JLabel("Nº de inversores: " + num_inversores);
+		Lnum_inversores=new JLabel("NÂº de inversores: " + num_inversores);
 		
-		Lnum_inversores.setToolTipText("Número total de inversores");
+		Lnum_inversores.setToolTipText("NÃºmero total de inversores");
 		
 		final int LnumW=150;
 		final int LnumH=30;
@@ -2445,7 +2445,7 @@ class inversor_panel extends JPanel{
 		
 		Bok=new JButton("");
 		
-		Bok.setToolTipText("Añadir");
+		Bok.setToolTipText("AÃ±adir");
 		
 		final int BokW=20;
 		final int BokH=20;
@@ -2487,7 +2487,7 @@ class inversor_panel extends JPanel{
 			
 			public void actionPerformed(ActionEvent e) {
 				
-				mensaje m=new mensaje("Se borrarán todos los inversores actuales", "¿Quiere continuar?", "Warning", 0);
+				mensaje m=new mensaje("Se borrarÃ¡n todos los inversores actuales", "Â¿Quiere continuar?", "Warning", 0);
 				
 				int aceptar=m.show();
 				
@@ -2514,9 +2514,9 @@ class inversor_panel extends JPanel{
 		});
 		
 		
-		JButton nuevo_inversor=new JButton("Añadir inversor");
+		JButton nuevo_inversor=new JButton("AÃ±adir inversor");
 
-		nuevo_inversor.setToolTipText("Añadir nuevo inversor");
+		nuevo_inversor.setToolTipText("AÃ±adir nuevo inversor");
 		
 		nuevo_inversor.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
@@ -2527,7 +2527,7 @@ class inversor_panel extends JPanel{
 				if(num_inversores==1000) {
 					
 					Toolkit.getDefaultToolkit().beep();
-					JOptionPane.showMessageDialog(null, "No se pueden añadir más de 1000 inversores", "Error", 0);
+					JOptionPane.showMessageDialog(null, "No se pueden aÃ±adir mÃ¡s de 1000 inversores", "Error", 0);
 					
 					
 				}else {
@@ -2549,9 +2549,9 @@ class inversor_panel extends JPanel{
 		add(nuevo_inversor);
 		
 		
-		Cauto=new JCheckBox("Automático");
+		Cauto=new JCheckBox("AutomÃ¡tico");
 		
-		Cauto.setToolTipText("Añadir un número de inversores automàticamente");
+		Cauto.setToolTipText("AÃ±adir un nÃºmero de inversores automÃ ticamente");
 		
 		Cauto.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
@@ -2572,7 +2572,7 @@ class inversor_panel extends JPanel{
 				
 				if(Cauto.isSelected()) {
 										
-					Lnum_inversores.setText("Nº de inversores:");
+					Lnum_inversores.setText("NÂº de inversores:");
 					
 					Lnum_inversores.setSize(100, LnumH);
 					
@@ -2590,7 +2590,7 @@ class inversor_panel extends JPanel{
 					
 					//num_inversores=(int) Snum_inversores.getValue();
 					
-					Lnum_inversores.setText("Nº de inversores: " + num_inversores);
+					Lnum_inversores.setText("NÂº de inversores: " + num_inversores);
 					
 					nuevo_inversor.setEnabled(true);
 					
@@ -2763,7 +2763,7 @@ class inversor_panel extends JPanel{
 		vertical.add(inversor);
 						
 		if(!Cauto.isSelected()) {
-			Lnum_inversores.setText("Nº de inversores: " + num_inversores);
+			Lnum_inversores.setText("NÂº de inversores: " + num_inversores);
 		}
 		
 		setVelScroll(num_inversores);
@@ -2783,7 +2783,7 @@ class inversor_panel extends JPanel{
 		vertical.add(inversor);
 						
 		if(!Cauto.isSelected()) {
-			Lnum_inversores.setText("Nº de inversores: " + num_inversores);
+			Lnum_inversores.setText("NÂº de inversores: " + num_inversores);
 		}
 		
 		setVelScroll(num_inversores);
@@ -2797,14 +2797,14 @@ class inversor_panel extends JPanel{
 		if(Cauto.isSelected()) {
 			
 			Toolkit.getDefaultToolkit().beep();
-			JOptionPane.showMessageDialog(null, "No se pueden eliminar inversores mientras este el modo automático activado", "Error", 0);
+			JOptionPane.showMessageDialog(null, "No se pueden eliminar inversores mientras este el modo automÃ¡tico activado", "Error", 0);
 			
 		}else {
 		
 			if(num_inversores==1) {
 				
 				Toolkit.getDefaultToolkit().beep();
-				JOptionPane.showMessageDialog(null, "Como mínimo debe haber un inversor", "Error", 0);
+				JOptionPane.showMessageDialog(null, "Como mÃ­nimo debe haber un inversor", "Error", 0);
 				
 			}else {
 			
@@ -2834,7 +2834,7 @@ class inversor_panel extends JPanel{
 				
 				inversores_panel.remove(inversor);
 				
-				Lnum_inversores.setText("Nº de inversores: " + num_inversores);
+				Lnum_inversores.setText("NÂº de inversores: " + num_inversores);
 				
 				setVelScroll(num_inversores);
 				
@@ -3172,27 +3172,27 @@ class empresa_panel extends JPanel{
 		barra_superior.setBackground(Color.GRAY.brighter());
 		
 		JLabel Lnombre=new JLabel("Nombre");
-		JLabel Lacciones=new JLabel("Nº acciones");
+		JLabel Lacciones=new JLabel("NÂº acciones");
 		JLabel Lvalor=new JLabel("Valor");
 		JLabel Lmax=new JLabel("Max.");
 		JLabel Lmin=new JLabel("Min.");
-		JLabel Lporcentaje=new JLabel("± %");
+		JLabel Lporcentaje=new JLabel("Â± %");
 		JLabel Laleatorio=new JLabel("Aleatorio");
 		JLabel[] Ltrimestres=new JLabel[4];
 		
-		Lnombre.setToolTipText("Nombre única para la empresa");
-		Lacciones.setToolTipText("Número de acciones disponibles");
-		Lvalor.setToolTipText("Valor inicial de cada acción");
-		Lmax.setToolTipText("Valor máximo que podrá llegar a tener las acciones");
-		Lmin.setToolTipText("Valor mínimo que podrán llegar a tener las acciones");
-		Lporcentaje.setToolTipText("Porcentaje de aumento/decremento que sufrirán las acciones después de ser compradas/vendidas");
-		Laleatorio.setToolTipText("Previsión aleatoria o manual del aumento/decremento de las acciones al final de cada trimestre");
+		Lnombre.setToolTipText("Nombre Ãºnica para la empresa");
+		Lacciones.setToolTipText("NÃºmero de acciones disponibles");
+		Lvalor.setToolTipText("Valor inicial de cada acciÃ³n");
+		Lmax.setToolTipText("Valor mÃ¡ximo que podrÃ¡ llegar a tener las acciones");
+		Lmin.setToolTipText("Valor mÃ­nimo que podrÃ¡n llegar a tener las acciones");
+		Lporcentaje.setToolTipText("Porcentaje de aumento/decremento que sufrirÃ¡n las acciones despuÃ©s de ser compradas/vendidas");
+		Laleatorio.setToolTipText("PrevisiÃ³n aleatoria o manual del aumento/decremento de las acciones al final de cada trimestre");
 		
 		for(int i=0; i< Ltrimestres.length; i++) {
 			
-			Ltrimestres[i]=new JLabel((i+1) + "º trimestre");
+			Ltrimestres[i]=new JLabel((i+1) + "Âº trimestre");
 			
-			Ltrimestres[i].setToolTipText("Previsión del aumento/decremento de las acciones en el " + (i+1) + " trimestre");
+			Ltrimestres[i].setToolTipText("PrevisiÃ³n del aumento/decremento de las acciones en el " + (i+1) + " trimestre");
 			
 		}
 				
@@ -3221,9 +3221,9 @@ class empresa_panel extends JPanel{
 		num_empresas=0;
 		
 		
-		Lnum_empresas=new JLabel("Nº de empresas: " + num_empresas);
+		Lnum_empresas=new JLabel("NÂº de empresas: " + num_empresas);
 		
-		Lnum_empresas.setToolTipText("Número total de empresas");
+		Lnum_empresas.setToolTipText("NÃºmero total de empresas");
 		
 		final int LnumW=150;
 		final int LnumH=30;
@@ -3261,7 +3261,7 @@ class empresa_panel extends JPanel{
 		
 		Bok=new JButton("");
 		
-		Bok.setToolTipText("Añadir");
+		Bok.setToolTipText("AÃ±adir");
 		
 		final int BokW=20;
 		final int BokH=20;
@@ -3304,7 +3304,7 @@ class empresa_panel extends JPanel{
 			
 			public void actionPerformed(ActionEvent e) {
 				
-				mensaje m=new mensaje("Se borrarán todas las empresas actuales", "¿Quiere continuar?", "Warning", 1);
+				mensaje m=new mensaje("Se borrarÃ¡n todas las empresas actuales", "Â¿Quiere continuar?", "Warning", 1);
 				
 				int aceptar=m.show();				
 				if(aceptar==0) {
@@ -3330,9 +3330,9 @@ class empresa_panel extends JPanel{
 		});
 		
 		
-		JButton nueva_empresa=new JButton("Añadir empresa");
+		JButton nueva_empresa=new JButton("AÃ±adir empresa");
 
-		nueva_empresa.setToolTipText("Añadir nueva empresa");
+		nueva_empresa.setToolTipText("AÃ±adir nueva empresa");
 		
 		nueva_empresa.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
@@ -3343,7 +3343,7 @@ class empresa_panel extends JPanel{
 				if(num_empresas==1000) {
 					
 					Toolkit.getDefaultToolkit().beep();
-					JOptionPane.showMessageDialog(null, "No se pueden añadir más de 1000 empresas", "Error", 0);
+					JOptionPane.showMessageDialog(null, "No se pueden aÃ±adir mÃ¡s de 1000 empresas", "Error", 0);
 					
 				}else {
 					
@@ -3364,9 +3364,9 @@ class empresa_panel extends JPanel{
 		add(nueva_empresa);
 		
 		
-		Cauto=new JCheckBox("Automático");
+		Cauto=new JCheckBox("AutomÃ¡tico");
 		
-		Cauto.setToolTipText("Añadir un número de empresas automaticamente");
+		Cauto.setToolTipText("AÃ±adir un nÃºmero de empresas automaticamente");
 		
 		Cauto.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
@@ -3387,7 +3387,7 @@ class empresa_panel extends JPanel{
 				
 				if(Cauto.isSelected()) {
 										
-					Lnum_empresas.setText("Nº de empresas:");
+					Lnum_empresas.setText("NÂº de empresas:");
 					
 					Lnum_empresas.setSize(100, LnumH);
 					
@@ -3405,7 +3405,7 @@ class empresa_panel extends JPanel{
 					
 					//num_inversores=(int) Snum_inversores.getValue();
 					
-					Lnum_empresas.setText("Nº de empresas: " + num_empresas);
+					Lnum_empresas.setText("NÂº de empresas: " + num_empresas);
 					
 					nueva_empresa.setEnabled(true);
 					
@@ -3790,7 +3790,7 @@ class empresa_panel extends JPanel{
 		vertical.add(empresa);
 						
 		if(!Cauto.isSelected()) {
-			Lnum_empresas.setText("Nº de empresas: " + num_empresas);
+			Lnum_empresas.setText("NÂº de empresas: " + num_empresas);
 		}
 				
 		setVelScroll(num_empresas);
@@ -3810,7 +3810,7 @@ class empresa_panel extends JPanel{
 		vertical.add(empresa);
 						
 		if(!Cauto.isSelected()) {
-			Lnum_empresas.setText("Nº de empresas: " + num_empresas);
+			Lnum_empresas.setText("NÂº de empresas: " + num_empresas);
 		}
 				
 		setVelScroll(num_empresas);
@@ -3824,14 +3824,14 @@ class empresa_panel extends JPanel{
 		if(Cauto.isSelected()) {
 			
 			Toolkit.getDefaultToolkit().beep();
-			JOptionPane.showMessageDialog(null, "No se pueden eliminar empresas mientras este el modo automático activado", "Error", 0);
+			JOptionPane.showMessageDialog(null, "No se pueden eliminar empresas mientras este el modo automÃ¡tico activado", "Error", 0);
 			
 		}else {
 		
 			if(num_empresas==1) {
 				
 				Toolkit.getDefaultToolkit().beep();
-				JOptionPane.showMessageDialog(null, "Como mínimo debe haber una empresa", "Error", 0);
+				JOptionPane.showMessageDialog(null, "Como mÃ­nimo debe haber una empresa", "Error", 0);
 				
 			}else {
 			
@@ -3861,7 +3861,7 @@ class empresa_panel extends JPanel{
 				
 				empresas_panel.remove(empresa);
 				
-				Lnum_empresas.setText("Nº de empresas: " + num_empresas);
+				Lnum_empresas.setText("NÂº de empresas: " + num_empresas);
 				
 				setVelScroll(num_empresas);
 				
@@ -4694,7 +4694,7 @@ class start implements Runnable{
 		
 		for(int i=0; i<4; i++) { //CADA VUELTA SON 3 MESES
 			
-			log.escribir("---" + (i+1) + "º TRIMESTRE ---");
+			log.escribir("---" + (i+1) + "Âº TRIMESTRE ---");
 			
 			// [OPERACION DE CADA INVERSOR] ////////////////////////////////////////////////////////////////////////////////////////
 			
@@ -4856,13 +4856,13 @@ class start implements Runnable{
 
 class empresa{
 	
-	private int acciones; //Nº DE ACCIONES RESTANTES
+	private int acciones; //NÂº DE ACCIONES RESTANTES
 	private double valor_acciones; //PRECIO DE LAS ACCIONES
 	private double valor_max_accion, valor_min_accion;
 	private double porcentaje_accion; //EN PORCENTAJE LO QUE SUBIRA O BAJARA LAS ACCIONES DESPUES DE QUE TODOS LOS INVERSORES HAYAN COMPRADO/VENDIDO. +[porcentaje_variacion]% POR CADA COMPRA / -[porcentaje_variacion]% POR CADA VENTA
 	private double[] prevision_acciones; //PORCENTAJE DE VARIACION PREVISTO EN CADA TRIMESTRE
 	private boolean prevision_acciones_aleatorio; //APLICAR O NO PREVISIONES ALEATORIAS
-	private double porcentaje_variacion; //PORCENTAJE QUE VARIARAN LAS EMPRESAS DESPUÉS DE COMPRAR/VENDER ACCIONES
+	private double porcentaje_variacion; //PORCENTAJE QUE VARIARAN LAS EMPRESAS DESPUÃ‰S DE COMPRAR/VENDER ACCIONES
 	private final String ID;
 	
 	private archivo log;
@@ -4892,11 +4892,11 @@ class empresa{
 							
 				if(prevision_acciones[i]>0) {
 					
-					log.escribir("Empresa [" + ID + "] en el " + (i+1) + "º trimestre aumentara un " + (prevision_acciones[i]) + "%.");
+					log.escribir("Empresa [" + ID + "] en el " + (i+1) + "Âº trimestre aumentara un " + (prevision_acciones[i]) + "%.");
 					
 				}else {
 																				
-					log.escribir("Empresa [" + ID + "] en el " + (i+1) + "º trimestre disminuira un " + (prevision_acciones[i]) + "%.");
+					log.escribir("Empresa [" + ID + "] en el " + (i+1) + "Âº trimestre disminuira un " + (prevision_acciones[i]) + "%.");
 					
 				}
 			}
@@ -4938,11 +4938,11 @@ class empresa{
 			
 			if(porcentaje>0) {
 				
-				log.escribir("Empresa [" + ID + "] en el " + (trimestre+1) + "º trimestre aumentara un " + porcentaje + "%.");
+				log.escribir("Empresa [" + ID + "] en el " + (trimestre+1) + "Âº trimestre aumentara un " + porcentaje + "%.");
 				
 			}else {
 				
-				log.escribir("Empresa [" + ID + "] en el " + (trimestre+1) + "º trimestre disminuira un " + porcentaje + "%.");
+				log.escribir("Empresa [" + ID + "] en el " + (trimestre+1) + "Âº trimestre disminuira un " + porcentaje + "%.");
 				
 			}
 						
@@ -5047,7 +5047,7 @@ class empresa{
 	
 	public void infoEmpresa() {
 		
-		log.escribir("Empresa[" + ID + "] - Nº acciones: " + acciones + " - Valor acciones: " + valor_acciones + " rupias");
+		log.escribir("Empresa[" + ID + "] - NÂº acciones: " + acciones + " - Valor acciones: " + valor_acciones + " rupias");
 		
 	}
 	
@@ -5056,7 +5056,7 @@ class empresa{
 class inversor{ //INVERSOR PADRE
 	
 	private double dinero; //DINERO
-	private int n_acciones; //Nº DE ACCIONES QUE CONTIENE
+	private int n_acciones; //NÂº DE ACCIONES QUE CONTIENE
 	private ArrayList<empresa> acciones; //LISTA DE LAS ACCIONES QUE CONTIENE
 	private ArrayList<empresa> prevision_acciones; //LISTA QUE CONTIENE LAS ACCIONES A INVERTIR ORDENADA EN FUNCION DE LA GANANCIA MINIMA PREVISTA
 	private final String ID;
@@ -5091,7 +5091,7 @@ class inversor{ //INVERSOR PADRE
 				acciones.add(e);
 				n_acciones++;
 							
-				log.escribir("Inversor[" + ID + "]: COMPRANDO ACCION - Empresa[" + e.getID() + "] - Valor de la accion: " + e.getValor_acciones() + " rupias - Dinero restante: " + dinero + " - Nº de acciones actuales: " + n_acciones);
+				log.escribir("Inversor[" + ID + "]: COMPRANDO ACCION - Empresa[" + e.getID() + "] - Valor de la accion: " + e.getValor_acciones() + " rupias - Dinero restante: " + dinero + " - NÂº de acciones actuales: " + n_acciones);
 				
 			}else {
 				
@@ -5121,7 +5121,7 @@ class inversor{ //INVERSOR PADRE
 			acciones.remove(e);
 			n_acciones--;
 						
-			log.escribir("Inversor [" + ID + "]: VENDIENDO ACCION - Empresa[" + e.getID() + "] - Valor de la accion: " + e.getValor_acciones() + " rupias - Dinero actual: " + dinero + " rupias -  Nº de acciones restantes: " + n_acciones);
+			log.escribir("Inversor [" + ID + "]: VENDIENDO ACCION - Empresa[" + e.getID() + "] - Valor de la accion: " + e.getValor_acciones() + " rupias - Dinero actual: " + dinero + " rupias -  NÂº de acciones restantes: " + n_acciones);
 			
 			return true;
 			
@@ -5329,7 +5329,7 @@ class inversor{ //INVERSOR PADRE
 		
 		for(inversor inversor: inversores) {
 										
-			if(inversor.getID()!=this.getID()) { //EVALUA QUE NO SE AÑADA A SI MISMO
+			if(inversor.getID()!=this.getID()) { //EVALUA QUE NO SE AÃ‘ADA A SI MISMO
 					
 				lista_resto_inversores.add(inversor);
 					
@@ -5445,7 +5445,7 @@ class inversor{ //INVERSOR PADRE
 			
 			//////////////////////////////////////////////////////
 			
-			//int n_compras1=(int) (dinero1_max/empresas[i].getValor_acciones()); //EL Nº MAXIMO DE ACCIONES QUE PUEDE COMPRAR DE CADA ACCION
+			//int n_compras1=(int) (dinero1_max/empresas[i].getValor_acciones()); //EL NÂº MAXIMO DE ACCIONES QUE PUEDE COMPRAR DE CADA ACCION
 			//int n_compras2=(int) (dinero2_max/empresas[i].getValor_acciones());
 			
 			//int n_ventas1=0;
@@ -5578,7 +5578,7 @@ class inversor{ //INVERSOR PADRE
 			
 			prevision_acciones.add(prevision.getEmpresa());
 			
-			log.escribir("    - Empresa: " + prevision.getEmpresa().getID() + " - Ganancia mínima: " + prevision.getGanancia() + " rupias --> Valor medio: " + prevision.getValor_medio() + " - Valor max: " + prevision.getValor_maximo() + " - Valor min: " + prevision.getValor_minimo() + " Valor act: " + prevision.getValor_accion() + " - Variacion: " + prevision.getPorcentaje() + "%");
+			log.escribir("    - Empresa: " + prevision.getEmpresa().getID() + " - Ganancia mÃ­nima: " + prevision.getGanancia() + " rupias --> Valor medio: " + prevision.getValor_medio() + " - Valor max: " + prevision.getValor_maximo() + " - Valor min: " + prevision.getValor_minimo() + " Valor act: " + prevision.getValor_accion() + " - Variacion: " + prevision.getPorcentaje() + "%");
 						
 		}						
 		
@@ -5628,7 +5628,7 @@ class inversor{ //INVERSOR PADRE
 	
 	public void infoInversor() {
 		
-		log.escribir("Inversor [" + ID + "] - Dinero: " + dinero + " rupias - Nº acciones: " + n_acciones + " - Lista de acciones:");
+		log.escribir("Inversor [" + ID + "] - Dinero: " + dinero + " rupias - NÂº acciones: " + n_acciones + " - Lista de acciones:");
 		
 		for(empresa accion: acciones) {
 			
@@ -6186,11 +6186,11 @@ class archivo_resultado{ //CLASE QUE SE ENCARGA DE REGISTRAR TODOS LOS RESULTADO
 			
 			for(int i=0; i<num_inversores; i++) {
 				
-				buffer.write("  " + (i+1) + "º  |");
+				buffer.write("  " + (i+1) + "Âº  |");
 				
 			}
 			
-			//buffer.write("|	     |  1º  |  2º  |  3º  |"); buffer.newLine();
+			//buffer.write("|	     |  1Âº  |  2Âº  |  3Âº  |"); buffer.newLine();
 			buffer.newLine();
 			buffer.write("+------------+");
 			
@@ -6254,7 +6254,7 @@ class archivo_resultado{ //CLASE QUE SE ENCARGA DE REGISTRAR TODOS LOS RESULTADO
 			buffer.newLine();
 			buffer.newLine();
 
-			buffer.write("https://github.com/daniieelgs/simulador_inversores");
+			buffer.write("https://github.com/daniieelgs/bolsa_valores");
 			buffer.newLine();
 			buffer.write("daniieelgs@gmail.com");
 			buffer.newLine();
